@@ -2,6 +2,12 @@
 
 This repo is used as an example for Backend Module 3 email lesson.
 
+### Versions
+
+Ruby 2.5.3
+
+Rails 5.1.7
+
 ### Set Up Instructions
 
 ```bash
