@@ -1,0 +1,25 @@
+<h3>
+  <%= "Welcome, #{current_user.first_name}!" %>
+</h3>
+
+<p>Please send friendly advice to a friend.</p>
+
+<div class="form-wrapper">
+  <%= form_tag '/advice', method: :post do %>
+    <div class="form-group">
+      <div class="col-sm-3 my-1">
+        <div class="input-group">
+          <%= text_field_tag :friends_name, nil, class:"form-control", id:"inputPassword3", placeholder: "Friend's Name" %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3 my-1">
+        <%= text_field_tag :friends_email, nil, class:"form-control", id:"inlineFormInputName", placeholder: "Friend's Email" %>
+      </div>
+    </div>
+    <div class="col-auto my-1">
+      <%= submit_tag "Send Advice", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

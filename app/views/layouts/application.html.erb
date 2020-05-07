@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FriendlyAdvice</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class="image-wrapper">
+        <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1378&q=80" alt="">
+      </div>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+          <div class="navbar-nav">
+            <% if logged_in? %>
+              <%= link_to "Send Advice", '/advice', class: "nav-link"%>
+              <%= link_to "Log out", '/logout', method: 'delete', class: "nav-link"%>
+            <% else %>
+              <%= link_to "Welcome", '/', class: "nav-link" %>
+              <%= link_to "Register as a user", registration_path, class: "nav-link" %>
+              <%= link_to "Log in", "/login", class: "nav-link" %>
+            <% end %>
+          </div>
+        </div>
+      </nav>
+      <% flash.each do |type, msg| %>
+        <div class="<%= "alert alert-#{type}" %>">
+          <%= msg %>
+        </div>
+      <% end %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </body>
+    <a class="accredidation" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@8moments?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Simon Matzinger"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Photo Credit to Simon Matzinger</span></a>
+</html>
+
+</html>

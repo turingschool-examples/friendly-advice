@@ -1,0 +1,21 @@
+<h3>Thanks for returning, please log in below!</h3>
+
+<div class="form-wrapper">
+  <%= form_tag '/login', method: :post do %>
+    <div class="form-group">
+      <div class="col-sm-3 my-1">
+        <%= text_field_tag :email, nil, class:"form-control", id:"inlineFormInputName", placeholder: "Email" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-3 my-1">
+        <div class="input-group">
+          <%= password_field_tag :password, nil, class:"form-control", id:"inputPassword3", placeholder: "Password" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto my-1">
+      <%= submit_tag "Submit", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
