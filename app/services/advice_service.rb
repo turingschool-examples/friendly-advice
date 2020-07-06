@@ -6,9 +6,7 @@ end
 
 private
   def conn
-    Faraday.new(url: 'https://api.adviceslip.com') do |f|
-      f.adapter Faraday.default_adapter
-    end
+    Faraday.new(url: 'https://api.adviceslip.com')
   end
 
   def get_advice(path)
