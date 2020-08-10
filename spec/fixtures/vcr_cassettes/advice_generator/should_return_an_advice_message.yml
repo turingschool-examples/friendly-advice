@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 May 2020 17:44:09 GMT
+      - Mon, 10 Aug 2020 20:09:06 GMT
       Server:
-      - Apache/2.4.29 (Ubuntu)
+      - Apache
       Expires:
-      - Thu, 07 May 2020 17:44:14 GMT
+      - Mon, 10 Aug 2020 20:09:11 GMT
       Cache-Control:
       - max-age=5
       - max-age=600, private, must-revalidate
@@ -45,8 +45,9 @@ http_interactions:
       - Accept-Encoding
       Content-Security-Policy:
       - default-src 'self';   script-src 'self' 'unsafe-inline' adviceslip.com ssl.google-analytics.com
-        www.google-analytics.com;   connect-src 'self';   style-src 'self' 'unsafe-inline';   frame-src;   img-src
-        * ;   object-src 'none';   font-src * 'self';
+        www.google-analytics.com www.googletagmanager.com;   connect-src 'self';   style-src
+        'self' 'unsafe-inline';   frame-src;   img-src * ;   object-src 'none';   font-src
+        * 'self' data:;
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -54,12 +55,12 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, OPTIONS
       Content-Length:
-      - '72'
+      - '108'
       Content-Type:
       - text/html; charset=UTF-8
     body:
       encoding: ASCII-8BIT
-      string: '{"slip": { "id": 12, "advice": "Always block trolls."}}'
-    http_version: null
-  recorded_at: Thu, 07 May 2020 17:44:09 GMT
-recorded_with: VCR 5.1.0
+      string: '{"slip": { "id": 57, "advice": "If you get stuck, try doing the opposite
+        of what the solution requires."}}'
+  recorded_at: Mon, 10 Aug 2020 20:09:06 GMT
+recorded_with: VCR 6.0.0
