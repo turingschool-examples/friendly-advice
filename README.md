@@ -6,7 +6,7 @@ This repo is used as an example for Backend Module 3 email lesson.
 
 Ruby 2.5.3
 
-Rails 5.1.7
+Rails 5.2.4.3
 
 ### Set Up Instructions
 
